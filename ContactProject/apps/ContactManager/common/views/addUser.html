@@ -1,0 +1,29 @@
+<ion-view title="New Contact" id="background"> <ion-content>
+
+<div class="item item-body item-text-wrap">
+	<div class="list">
+		<label class="item item-input userform"> <input
+			ng-model="contactForm.userName" placeholder="Username" type="text"
+			style="color: white;" />
+		</label> <label class="item item-input userform"> <input
+			type="password" id="pw1" name="pw1" ng-model="contactForm.pw1"
+			ng-required placeholder="Password" style="color: white;" />
+		</label> <label class="item item-input userform"> <input
+			type="password" id="pw2" name="pw2" ng-model="contactForm.pw2"
+			ng-required pw-check="contactForm.pw1" placeholder="Password"
+			style="color: white;" />
+		</label>
+
+		<div class="msg-block" ng-show="contactForm.$error">
+			<span class="msg-error" ng-show="contactForm.pw2.$error.pwmatch">
+				Passwords don't match. </span>
+		</div>
+
+	</div>
+
+	<button class="button button-full button-dark" ng-click="addUser()">
+		Save</button>
+</div>
+<a ui-sref="login"
+	class="button icon-left ion-chevron-left button-clear button-dark"
+	style="color: lightgray; font-weight: bold;">Back</a> </ion-content> </ion-view>

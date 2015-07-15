@@ -1,0 +1,18 @@
+<ion-content has-header="true" id="background">
+<div >
+<div id="contacts" class="list list-inset">
+	<label class="item item-input login"> <input type="text"
+		data-ng-model="form.username" id="usernameInputField"
+		placeholder="Username" />
+	</label> <label class="item item-input login"> <input type="password"
+		data-ng-model="form.password" id="passwordInputField"
+		placeholder="Password" />
+	</label>
+	<button
+		class="button button-block button-dark ion-log-in"
+		data-ng-click="submitLogin()">Login</button>
+		<button class="button button-outline button-light" ui-sref="addUser">Create user</button>
+	<div data-ng-model="errorLoginMsg" style="color: red;"
+		id="errorLoginMsg"></div>
+</div>
+</div>

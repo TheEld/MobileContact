@@ -1,0 +1,223 @@
+/*	 Licensed Materials - Property of IBM
+	 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
+	 US Government Users Restricted Rights - Use, duplication or
+     disclosure restricted by GSA ADP Schedule Contract with IBM Corp. */
+     
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	//background-color: #E8DDCB;
+}
+
+#header {
+	text-align: center;
+	background-color: #1D4D90;
+	color: #F9FAFB;
+	font-size: 16px;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px solid white;
+	position: fixed;
+	width: 100%;
+}
+
+#wrapper {
+	width: 90%;
+	margin: auto;
+	padding-top: 38px;
+}
+
+
+h1 {
+	margin: 0;
+	font-size: 18px;
+}
+
+.appButton {
+	width: 100%;
+	height: 3em;
+	font-size: 0.8em;
+	margin: 10px auto;
+}
+
+p {
+	padding: 10px;
+}
+
+/* Provide different styling for iOS 7. */
+body.wl_ios7 {
+	padding-top: 0 !important;
+}
+
+.wl_ios7 #header {
+	padding-top: 9px;
+}
+
+.wl_ios7 #wrapper {
+	padding-top: 55px;
+}/*	 Licensed Materials - Property of IBM
+	 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
+	 US Government Users Restricted Rights - Use, duplication or
+     disclosure restricted by GSA ADP Schedule Contract with IBM Corp. */
+     
+     /*My modifications */
+#currentPage {
+	padding-top: 20px;
+}
+
+
+
+.animate-if {
+  background:white;
+  border:1px solid black;
+  padding:10px;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+
+/* My modifications */
+
+.full-image {
+	border-radius: 50%;
+
+}
+
+.contact-details {
+	text-align: center;
+	
+}   
+
+a.button.icon.ion-trash-b {
+	float: right;
+}
+
+#contact-image {
+	max-width: 100%;
+	text-align:	center;
+}
+
+.crop {
+    width: 303px;
+    height: 303px;
+    max-width: 100%;
+    max-height: 30%;
+    overflow: hidden;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.crop img {
+	margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+.contact-list {
+	float: left;
+	padding-left: 15px;
+}
+
+div.item.item-avatar {
+	min-height: 90px;
+}
+
+button button-small button-dark {
+	float: relative;
+}
+
+#contacts {
+	text-align: center;
+	background: transparent;
+	margin-top: 50%;
+}
+
+div.contact-details button.button.button-outline.button-dark {
+	margin-top: 0.5em;
+}
+
+.button.icon-left.ion-chevron-left.button-clear.button-dark {
+	float: left;
+}
+
+a.button.button-icon.icon.ion-edit {
+	float: right;	
+}
+
+div.list.card {
+	margin-top: 0px;
+	
+}
+
+div.list {
+	margin-bottom: 0px;
+}
+
+.item-avatar, .item-avatar .item-content{
+	padding-left: 85px;
+}
+
+#contact-list-image {
+	  max-width: 60px;
+  	  max-height: 60px;
+}
+
+#item-content {
+	padding-left: 85px;
+	
+}
+
+a.item-content {
+	padding: 15px 20px 15px 15px;
+}
+
+div#contact-edit {
+	margin-top: 15px;
+}
+
+#background {
+	background-image: url("../images/triangles.jpg");
+	
+}
+
+#usernameInputField{
+	background: transparent;
+	color: white;
+}
+
+#passwordInputField{
+	background: transparent;
+	color: white;
+}
+
+.item.item-input.login {
+	background: transparent;
+}
+
+.item.item-body.item-text-wrap {
+	background: transparent;
+}
+
+.item.item-input.userform {
+	background: transparent;
+}

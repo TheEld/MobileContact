@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ContactProject">
+        <wb-resource deploy-path="/" source-path="/apps/ContactManager/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/ContactManager/mobilewebapp"/>
+        <wb-resource deploy-path="/" source-path="/apps/ContactManager/desktopbrowser"/>
+        <wb-resource deploy-path="/" source-path="/apps/ContactManager/android"/>
+        <property name="context-root" value="ContactProject"/>
+    </wb-module>
+</project-modules>

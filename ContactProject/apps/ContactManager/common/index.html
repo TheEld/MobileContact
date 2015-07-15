@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ContactManager</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+
+<!-- css -->
+<link rel="stylesheet" href="css/main.css">
+<link href="libs/ionic/css/ionic.css" rel="stylesheet">
+
+<!-- js -->
+<script src="libs/ionic/js/ionic.bundle.js"></script>
+<script src="libs/ng-cordova/ng-cordova.js"></script>
+<script src="libs/ionic/js/ui-utils.js"></script>
+<script src="libs/ngTouch/touch.js"></script>
+<script src="libs/ngTouch/swipe.js"></script>
+</head>
+
+<body style="display: none;" data-ng-controller="MainCtrl">
+
+<!--application UI goes here-->
+	<ion-side-menus > <ion-side-menu-content drag-content="false">
+	<ion-header-bar class="bar bar-header bar-dark">
+	
+	<div class="buttons" >				
+					<button class="button button-icon button-clear ion-navicon" menu-toggle="left"
+						data-ng-if="toogledrag"> </button> 			
+	    		</div>
+	
+	<h1 class="title">
+		<b>Contact Manager</b>
+	</h1>
+	</ion-header-bar> <ion-nav-view></ion-nav-view> </ion-side-menu-content> <ion-side-menu side="left" id="background">
+	<ion-list> <ion-item ui-sref="contact" nav-clear menu-close>Contact
+	List</ion-item> <ion-item ui-sref="newsFeed" nav-clear menu-close>News
+	Feed</ion-item> <ion-item ui-sref="login" nav-clear menu-close>Logout</ion-item>
+	</ion-list> </ion-side-menu> </ion-side-menus>
+
+	<div class="padding">
+
+		<div ng-model="errorLoginMsg" style="color: red;" id="errorLoginMsg"></div>
+	</div>
+	
+	
+	<!-- angularjs and ionic scripts(ionic bundles angular)-->
+	<script src="js/wlInit.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers/controllers.js"></script>
+	<script src="js/directives/directives.js"></script>
+	<script src="js/services/contactServices.js"></script>
+	<script src="js/services/userServices.js"></script>
+	<script src="js/services/feedServices.js"></script>
+	<script src="js/services/loginServices.js"></script>
+	<script src="js/controllers/LoginControllers.js"></script>
+	<script src="js/controllers/ContactControllers.js"></script>
+	<script src="js/controllers/NewsControllers.js"></script>
+	<script src="js/controllers/UserControllers.js"></script>
+</body>
+</html>

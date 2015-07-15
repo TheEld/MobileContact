@@ -1,0 +1,70 @@
+<ion-view title="Details"> <ion-content padding="true">
+
+<div class="list card">
+
+	<a ui-sref="contact"
+		class="button icon-left ion-chevron-left button-clear button-dark"
+		data-ng-if="visibility.backButton">Back</a> <a
+		class="button button-icon icon ion-edit"
+		data-ng-click="editContact(true)" data-ng-if="visibility.editButton"></a>
+
+	<div class="item item-body item-text-wrap">
+
+		<div class="contact">
+
+			<div class="contact-details">
+
+				<div class="crop">
+					<img ng-src="{{imageUrl}}" data-ng-click="isClickable && openFileDialog()"
+						id="image-url" ng-model="imageUrl" />
+				</div>
+				<button class="button button-outline button-dark"
+					data-ng-click="bindPicture()" data-ng-if="visibility.uploadButton">
+					Upload New Image</button>
+				<div id="detail-info" data-ng-if="visibility.displayContactInfo">
+					<h1>{{detail.NAME}}</h1>
+					<h2>Tel {{detail.TELEPHONE}}</h2>
+					<h2>Cel {{detail.MOBILE}}</h2>
+					<h2>{{detail.EMAIL}}</h2>
+				</div>
+				<div id="contact-edit" data-ng-if="visibility.displayEditForm">
+					<div class="list">
+						<label class="item item-input"> <span class="input-label">Name</span>
+							<input type="text" ng-model="detail.NAME" />
+						</label> <label class="item item-input"> <span class="input-label">Telephone</span>
+							<input type="tel" ng-model="detail.TELEPHONE" />
+						</label> <label class="item item-input"> <span class="input-label">Mobile</span>
+							<input type="tel" ng-model="detail.MOBILE" />
+						</label> <label class="item item-input"> <span class="input-label">Email</span>
+							<input type="email" ng-model="detail.EMAIL" />
+						</label>
+					</div>
+					<div class="button-bar">
+						<a class="button button-icon icon ion-checkmark"
+							data-ng-click="updateContact()"></a> <a
+							class="button button-icon icon ion-close"
+							data-ng-click="editContact(false)"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</ion-content> </ion-view>
+
+<form style="display: none" action='#' onsubmit="return false;">
+	<input type='file' id='imgfile' /> <input type='button' value='Load'
+		id="bindPicture" data-ng-click="" />
+
+</form>
+
+
+<ion-footer-bar class="bar-dark" data-ng-if="!isClickable">
+<div class="button-bar">
+	<a href="tel:{{detail.TELEPHONE}}"
+		class="button button-icon icon ion-android-call"></a> <a
+		href="sms:+{{detail.MOBILE}}"
+		class="button button-icon icon ion-android-mail"></a>
+</div>
+</ion-footer-bar>

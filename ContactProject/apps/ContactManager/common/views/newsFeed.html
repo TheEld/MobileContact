@@ -1,0 +1,11 @@
+
+<ion-view title="newsFeed" hide-nav-bar="true"> <ion-content>
+<ion-refresher pulling-text="Pull to refresh..."
+	on-refresh="onRefresh()"> </ion-refresher> <ion-list
+	class="list list-inset"> <ion-item
+	data-ng-repeat="news in feeds">
+<h2>{{news.title}}</h2>
+<h4>{{news.pubDate}}</h4>
+<a href="{{news.link}}" target="_blank">Go to website</a> </ion-item> </ion-list> </ion-content> </ion-view>
+
+

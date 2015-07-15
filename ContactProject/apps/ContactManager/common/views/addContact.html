@@ -1,0 +1,38 @@
+<ion-view title="New Contact"> <ion-content>
+
+
+<div class="item item-body item-text-wrap">
+	<a ui-sref="contact"
+		class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
+
+	<div class="crop">
+		<img ng-src="{{imageUrl}}" data-ng-click="openFileDialog()"
+			id="image-url" ng-model="imageUrl" />
+	</div>
+	<label class="item item-input"> <span class="input-label">Name</span>
+		<input ng-model="contactForm.contactName" placeholder="contact name"
+		type="text" />
+	</label> <label class="item item-input"> <span class="input-label">Phone</span>
+		<input type="tel" ng-max-length="50"
+		ng-model="contactForm.phoneNumber" placeholder="+00 (00) 0000-0000"
+		ui-mask="{{'+99 (99) 9999-9999'}}" />
+	</label> <label class="item item-input"> <span class="input-label">Mobile</span>
+		<input type="tel" ng-model="contactForm.mobileNumber"
+		placeholder="+00 (00) 00000-0000" ui-mask="{{'+99 (99) 99999-9999'}}" />
+	</label> <label class="item item-input"> <span class="input-label">Email</span>
+		<input ng-model="contactForm.email" ng-max-length="30"
+		placeholder="user@domain.com" type="email" />
+	</label>
+
+	<button class="button button-full button-dark" ng-click="addContact()">
+		Save</button>
+
+</div>
+
+</ion-content> </ion-view>
+
+<form style="display: none" action='#' onsubmit="return false;">
+	<input type='file' id='imgfile' /> <input type='button' value='Load'
+		id="bindPicture" data-ng-click="" />
+
+</form>
